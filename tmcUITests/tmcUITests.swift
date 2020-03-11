@@ -23,15 +23,6 @@ class tmcUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
@@ -40,4 +31,25 @@ class tmcUITests: XCTestCase {
             }
         }
     }
+    
+    
+    
+    /*
+        This test launches the application and after fetching the data, clicks on the User named "Antonette".
+        Then the application will be forwarded to the user detail view.
+     */
+    func testUserAndNavigateToDetail() {
+        print("testUserAndNavigateToDetail")
+        
+        let app = XCUIApplication()
+        app.launch()
+        let tablesQuery = app.tables
+        
+        XCTAssertTrue(tablesQuery.count > 0)
+        
+        XCTAssertTrue(tablesQuery.staticTexts["Antonette"].exists)
+        
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Antonette"]/*[[".cells.staticTexts[\"Antonette\"]",".staticTexts[\"Antonette\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
 }
