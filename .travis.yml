@@ -1,0 +1,5 @@
+language:
+  - swift
+osx_image: xcode10.1
+script:
+  - xcodebuild -workspace tmc.xcworkspace -scheme tmc -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=13.2' build
