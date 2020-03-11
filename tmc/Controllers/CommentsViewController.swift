@@ -37,11 +37,6 @@ class CommentsViewController: UIViewController {
         labelPostData.text = post?.body
     }
     
-    /*func fetchComments() {
-        self.showProgress()
-        ApiHelper.Instance.fetchComments(view: self)
-    }*/
-    
     func fetchAndSetComments() {
         self.showProgress()
          ApiHelper.Instance.call(url: Commons.URL_COMMENTS) { response in

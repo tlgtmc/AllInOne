@@ -83,12 +83,4 @@ extension AlbumListTableViewController {
         self.navigationController?.pushViewController(newViewController, animated: true)
         
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*if segue.identifier == "mapSegue" {
-            let mapVC = segue.destination as? UsersMapViewController
-            mapVC?.setUsers(users: self.albumList)
-        }*/
-    }
 }
