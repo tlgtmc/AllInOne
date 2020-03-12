@@ -36,6 +36,7 @@ class CommentsViewController: UIViewController {
     func setPostData() {
         labelPostTitle.text = post?.title
         labelPostData.text = post?.body
+        labelPostTitle.textColor = .tmc1
     }
     
     func fetchAndSetComments() {
@@ -99,12 +100,6 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.labelName.text = comments[indexPath.row].name!
         cell.labelEmail.text = comments[indexPath.row].email!
         cell.labelComment.text = comments[indexPath.row].body!
-        
-        if indexPath.row % 2 != 0 {
-            cell.contentView.backgroundColor = UIColor.pastel1
-        } else {
-            cell.contentView.backgroundColor = UIColor.pastel2
-        }
         
         return cell
     }

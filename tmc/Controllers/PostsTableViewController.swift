@@ -85,7 +85,7 @@ extension PostsTableViewController {
         cell.labelTitle.text = posts[indexPath.row].title!
         cell.labelComment.text = posts[indexPath.row].body!
         
-        cell.labelTitle.textColor = .tmc3
+        cell.labelTitle.textColor = .tmc1
         
         return cell
     }

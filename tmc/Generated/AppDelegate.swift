@@ -15,6 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.tmc1,
+            NSAttributedString.Key.font: UIFont(name: "Georgia-Bold", size: 24)!
+        ]
+        
+        let attrs2 = [
+            NSAttributedString.Key.foregroundColor: UIColor.tmc2,
+            NSAttributedString.Key.font: UIFont(name: "Georgia", size: 18)!
+        ]
+
+        let attrs3 = [
+            NSAttributedString.Key.foregroundColor: UIColor.tmc3,
+            NSAttributedString.Key.font: UIFont(name: "Georgia", size: 22)!
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        UINavigationBar.appearance().tintColor = UIColor.tmc3
+        UIBarButtonItem.appearance().setTitleTextAttributes(attrs2, for: UIControl.State.normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(attrs3, for: UIControl.State.highlighted)
         return true
     }
 

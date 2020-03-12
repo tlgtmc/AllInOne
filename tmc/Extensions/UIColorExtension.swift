@@ -29,15 +29,7 @@ extension UIColor {
     
     static let pastel1 = UIColor(rgb: 0xE0FEFE)
     static let pastel2 = UIColor(rgb: 0xC7CEEA)
-    static let pastel3 = UIColor(rgb: 0xFFDAC1)
-    static let pastel4 = UIColor(rgb: 0xFF9AA2)
-    static let pastel5 = UIColor(rgb: 0xFFFFD8)
-    static let pastel6 = UIColor(rgb: 0xB5EAD7)
     static let pastel7 = UIColor(rgb: 0xB29DD9)
-    static let pastel8 = UIColor(rgb: 0xFDFD98)
-    static let pastel9 = UIColor(rgb: 0xFE6B64)
-    static let pastel10 = UIColor(rgb: 0x77DD77)
-    static let pastel11 = UIColor(rgb: 0x779ECB)
     
     
     static let tmc1 = UIColor(rgb: 0x35495e)

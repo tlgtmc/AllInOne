@@ -70,14 +70,7 @@ extension AlbumListTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumCell
         
         cell.labelText.text = albumList[indexPath.row].title!
-        cell.imageViewAlbum.image = UIImage(named:"album")
-        
-        
-        if indexPath.row % 2 != 0 {
-            cell.contentView.backgroundColor = .tmc4
-        } else {
-            cell.contentView.backgroundColor = UIColor.pastel2
-        }
+        cell.imageViewAlbum.image = UIImage(named:"album")        
         
         return cell
     }
