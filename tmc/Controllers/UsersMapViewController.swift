@@ -18,6 +18,7 @@ class UsersMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Users' Locations"
         print(userList)
         mapView.delegate = self
         

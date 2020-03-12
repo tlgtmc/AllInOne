@@ -16,6 +16,7 @@ class AlbumListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Albums"
         if NetworkHelper.isConnectedToInternet() {
             fetchAlbum()
         } else {
@@ -70,6 +71,13 @@ extension AlbumListTableViewController {
         
         cell.labelText.text = albumList[indexPath.row].title!
         cell.imageViewAlbum.image = UIImage(named:"album")
+        
+        
+        if indexPath.row % 2 != 0 {
+            cell.contentView.backgroundColor = .tmc4
+        } else {
+            cell.contentView.backgroundColor = UIColor.pastel2
+        }
         
         return cell
     }

@@ -11,19 +11,6 @@ import Toast_Swift
 
 extension UIViewController {
     
-
-    @IBInspectable var viewCornerRadius: CGFloat {
-        get {
-            return self.layer.cornerRadius
-        }
-        set {
-            self.layer.cornerRadius = newValue
-            if viewShadow == false {
-                self.layer.masksToBounds = true
-            }
-        }
-    }
-    
     func showProgress() {
         self.view.makeToastActivity(.center)
     }

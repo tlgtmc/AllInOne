@@ -38,4 +38,10 @@ extension UIColor {
     static let pastel9 = UIColor(rgb: 0xFE6B64)
     static let pastel10 = UIColor(rgb: 0x77DD77)
     static let pastel11 = UIColor(rgb: 0x779ECB)
+    
+    
+    static let tmc1 = UIColor(rgb: 0x35495e)
+    static let tmc2 = UIColor(rgb: 0x347474)
+    static let tmc3 = UIColor(rgb: 0xee8572)
+    static let tmc4 = UIColor(rgb: 0xf1f3f4)
 }

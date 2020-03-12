@@ -47,6 +47,7 @@ class tmcUITests: XCTestCase {
         
         XCTAssertTrue(tablesQuery.count > 0)
         
+        
         XCTAssertTrue(tablesQuery.staticTexts["Antonette"].exists)
         
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Antonette"]/*[[".cells.staticTexts[\"Antonette\"]",".staticTexts[\"Antonette\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()

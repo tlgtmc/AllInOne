@@ -20,6 +20,7 @@ class CommentsViewController: UIViewController {
     var comments: [Comment] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Comments"
         self.tableViewComments.delegate = self
         self.tableViewComments.dataSource = self
         setPostData()
@@ -108,8 +109,5 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Comments:"
-    }
 }
 

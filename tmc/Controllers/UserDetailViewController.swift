@@ -23,10 +23,12 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var labelAddress: UILabel!
     var user: User?
     
+    @IBOutlet weak var buttonPosts: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setFields()
+        self.title = "User Detail"
     }
     
     func setFields() {
@@ -45,6 +47,9 @@ class UserDetailViewController: UIViewController {
         labelAddress.text = user?.getAddressStr()
         labelCompanyTitle.text = user?.company?.name
         labelCompany.text = user?.getCompanyStr()
+        
+        buttonPosts.roundButton(15, .tmc1, 1)
+        
     }
     
     func setUser(_user: User) {

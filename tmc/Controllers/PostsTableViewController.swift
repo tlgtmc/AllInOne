@@ -16,6 +16,8 @@ class PostsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Posts"
+        
         if NetworkHelper.isConnectedToInternet() {
             fetchAndSetPosts()
         } else {
@@ -83,11 +85,7 @@ extension PostsTableViewController {
         cell.labelTitle.text = posts[indexPath.row].title!
         cell.labelComment.text = posts[indexPath.row].body!
         
-        if indexPath.row % 2 != 0 {
-            cell.contentView.backgroundColor = UIColor.pastel1
-        } else {
-            cell.contentView.backgroundColor = UIColor.pastel2
-        }
+        cell.labelTitle.textColor = .tmc3
         
         return cell
     }
@@ -99,7 +97,6 @@ extension PostsTableViewController {
         newViewController.setPost(_post: posts[indexPath.row])
         newViewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(newViewController, animated: true)
-        
     }
     
 }

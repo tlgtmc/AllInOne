@@ -75,6 +75,10 @@ extension UsersTableViewController {
         cell.labelTitle.text = userList[indexPath.row].username!
         cell.labelSubtitle.text = userList[indexPath.row].getAddressStr()
         cell.labelFirstLetter.text = String(Array(cell.labelTitle.text!.uppercased())[0])
+        cell.labelFirstLetter.textColor = .tmc1
+        cell.labelTitle.textColor = .tmc3
+        cell.labelSubtitle.textColor = .tmc1
+        
         
         if indexPath.row % 2 != 0 {
             cell.labelFirstLetter.backgroundColor = UIColor.pastel1
